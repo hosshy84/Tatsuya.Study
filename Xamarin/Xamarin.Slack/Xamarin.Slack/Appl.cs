@@ -6,9 +6,9 @@ namespace Xamarin.Slack
 	{
 		public App()
 		{
-			InitializeComponent();
+			var content = new UserList();
 
-			MainPage = new Xamarin_SlackPage();
+			MainPage = new NavigationPage(content);
 		}
 
 		protected override void OnStart()

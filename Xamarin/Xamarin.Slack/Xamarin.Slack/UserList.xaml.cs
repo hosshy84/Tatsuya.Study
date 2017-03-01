@@ -5,10 +5,10 @@ using Xamarin.Slack.ViewModel;
 
 namespace Xamarin.Slack
 {
-	public partial class Xamarin_SlackPage : ContentPage
+	public partial class UserList : ContentPage
 	{
 		UsersViewModel viewModel;
-		public Xamarin_SlackPage()
+		public UserList()
 		{
 			InitializeComponent();
 
@@ -22,6 +22,8 @@ namespace Xamarin.Slack
 		{
 			var user = e.SelectedItem as User;
 			if (user == null) return;
+
+			await Navigation.PushAsync(new UserDetail(user, viewModel));
 
 			ListViewUsers.SelectedItem = null;
 		}

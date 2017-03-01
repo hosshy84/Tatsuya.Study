@@ -9,13 +9,14 @@ namespace Xamarin.Slack.Model
 		public string Name { get; set; }
 		[JsonProperty(PropertyName = "real_name")]
 		public string RealName { get; set; }
-		public string id { get; set; }
+		[JsonProperty(PropertyName = "id")]
+		public string Id { get; set; }
 		public Profile Profile { get; set; }
 	}
 
 	public class Profile
 	{
 		[JsonProperty(PropertyName = "image_original")]
-		public string ImageUrl { get; set; }
+		public string Avatar { get; set; }
 	}
 }

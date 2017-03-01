@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:Xamarin.Slack"
-	x:Class="Xamarin.Slack.Xamarin_SlackPage"
+	x:Class="Xamarin.Slack.UserList"
 	Title="Users">
 		<StackLayout Spacing="0">
-			<Button Text="Get RilakkumaClub Users" Command="{Binding GetUsersCommand}"/>
+			<Button Text="Get RilakkumaClub Members" Command="{Binding GetUsersCommand}"/>
 			<ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
 			<ListView x:Name="ListViewUsers" ItemsSource="{Binding Users}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ImageCell Text="{Binding Name}"
 							Detail="{Binding RealName}"
-							ImageSource="{Binding Profile.ImageUrl}"/>
+							ImageSource="{Binding Profile.Avatar}"/>
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
