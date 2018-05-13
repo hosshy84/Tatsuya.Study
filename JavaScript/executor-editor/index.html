@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor-editor :: demo</title>
+    <meta charset="utf-8" />
+
+    <!-- ExecutorEditor -->
+    <script src="http://piecioshka.github.io/executor-editor/dist/executor-editor.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="http://piecioshka.github.io/executor-editor/demo/vendors/prism/prism.js"></script>
+    <script src="http://piecioshka.github.io/executor-editor/demo/vendors/prism/custom-prism.js"></script>
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="http://piecioshka.github.io/executor-editor/demo/vendors/prism/prism.css" />
+    <link rel="stylesheet" href="http://piecioshka.github.io/executor-editor/demo/vendors/prism/custom-prism.css" />
+</head>
+<body>
+    <pre class="executor-editor" data-width="1000" data-height="400">
+class Cake {
+    constructor() {
+        this.type = 'Cheesecake';
+    }
+}
+
+console.log(new Cake());
+console.log('Applepie');
+</pre>
+    <script>ExecutorEditor.setup();</script>
+</body>
+</html>
